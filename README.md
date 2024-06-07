@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 TradeSense
 
 Welcome to TradeSense! This application is designed to provide a seamless stock trading experience, allowing users to manage their investments efficiently and effectively.
@@ -50,3 +51,6 @@ Analyze Performance: Check the performance of your stocks with detailed profit a
 Referral System: Invite friends using your unique referral code and earn commissions.
 
 Deposit/Withdraw Funds: Manage your funds easily with the deposit and withdrawal feature.
+=======
+# ArrowEnterprise
+>>>>>>> cfa1f91 (Initial commit)
