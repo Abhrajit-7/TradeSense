@@ -81,7 +81,7 @@ const username=localStorage.getItem('username');
         }
 
         function fetchProfile() {
-            fetch('http://arrowenterprise.co.in/api/v1/profiles/' + username,
+            fetch('http://localhost:8082/api/v1/profiles/' + username,
             {
             method: 'GET',
             headers: {

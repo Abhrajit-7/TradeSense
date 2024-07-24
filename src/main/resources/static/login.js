@@ -6,7 +6,7 @@ document.getElementById('login-section').addEventListener('submit', function (ev
 
 
     try {
-       fetch('http://arrowenterprise.co.in/api/v1/login', {
+       fetch('http://localhost:8082/api/v1/login', {
              method: 'POST',
              headers: {
                'Content-Type': 'application/json',
@@ -40,19 +40,7 @@ document.getElementById('login-section').addEventListener('submit', function (ev
              console.error('Error:', error);
              alert('Error: ' + error.message);
        })
-       /*.then(jwttoken => {
-
-             // Store the JWT token in localStorage
-                console.log(jwttoken);
-                 //localStorage.setItem('jwttoken', jwttoken);
-
-                 // Redirect to the authenticated dashboard page
-                 redirectToAuthenticatedDashboard();
-
-       })*/
-      //localStorage.setItem('token', data.token); // Store token in localStorage
-      //window.location.href = '/api/v1/userDashboard'; // Redirect to dashboard page after successful login
-    } catch (error) {
+       } catch (error) {
       document.getElementById('message').textContent = error.message;
       console.error('error ::: ',error)
       alert('Login failed..');
@@ -64,7 +52,7 @@ document.getElementById('login-section').addEventListener('submit', function (ev
               const jwtToken = localStorage.getItem('jwtToken');
 
               // Make a fetch request to the authenticated dashboard endpoint
-              fetch('http://arrowenterprise.co.in/api/v1/userDashboard', {
+              fetch('http://localhost:8082/api/v1/userDashboard', {
                   method: 'GET',
                   headers: {
                       'Authorization': `Bearer ${jwtToken}`

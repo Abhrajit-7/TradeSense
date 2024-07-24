@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const winner = document.getElementById('winner').value;
                 const slot = document.getElementById('slot').value;
 
-                fetch('http://arrowenterprise.co.in/api/v1/teer/winner', {
+                fetch('http://localhost:8082/api/v1/winner', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',

@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function fetchTransactions() {
-    fetch('http://arrowenterprise.co.in/api/v1/' + username + '/transactions',{
+    fetch('http://localhost:8082/api/v1/' + username + '/transactions',{
     method: 'GET',
     headers: {
         'Authorization': `Bearer ${jwtToken}`,

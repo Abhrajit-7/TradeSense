@@ -8,12 +8,12 @@
 		<version>3.2.5</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.arrow</groupId>
-	<artifactId>Arrow</artifactId>
+	<groupId>com.funWithStocks</groupId>
+	<artifactId>FunWithStocks</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
-	<name>Arrow</name>
-	<description>Welcome to Arrow Ent</description>
+	<name>FunWithStocks</name>
+	<description>Welcome to FunWithStocks Ent</description>
 	<properties>
 		<java.version>21</java.version>
 	</properties>
@@ -105,7 +105,7 @@
 		<dependency>
 			<groupId>org.json</groupId>
 			<artifactId>json</artifactId>
-			<version>20210307</version>
+			<version>20231013</version>
 		</dependency>
 
 		<!-- Spring Boot Starter Websocket -->

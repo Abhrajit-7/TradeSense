@@ -1,4 +1,3 @@
-// src/main/resources/static/script.js
 document.getElementById('signup-section').addEventListener('submit', function (event) {
     event.preventDefault();
   
@@ -9,7 +8,6 @@ document.getElementById('signup-section').addEventListener('submit', function (e
     const parentId = document.getElementById('parentId').value;
     const role = document.getElementById('role').value;
     const usernamePattern = /^[a-zA-Z0-9!@#\$%\^\&*\)\(+=._-]+$/;
-
     const usernameInput = document.getElementById('username');
     const usernameMessage = document.getElementById('usernameError');
 
@@ -21,7 +19,7 @@ document.getElementById('signup-section').addEventListener('submit', function (e
             alert('Username valid!');
         }
   
-    fetch('http://arrowenterprise.co.in/api/v1/register', {
+    fetch('http://localhost:8082/api/v1/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

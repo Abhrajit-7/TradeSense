@@ -26,7 +26,7 @@ function showMessage2(message) {
 }
 
 function fetchLastMessage1() {
-    fetch('http://arrowenterprise.co.in/api/v1/teer/last-message/slot1')
+    fetch('http://localhost:8082/api/v1/last-message/slot1')
         .then(response => response.json())
         .then(message => {
             showMessage1(message);
@@ -34,7 +34,7 @@ function fetchLastMessage1() {
 }
 
 function fetchLastMessage2() {
-    fetch('http://arrowenterprise.co.in/api/v1/teer/last-message/slot2')
+    fetch('http://localhost:8082/api/v1/last-message/slot2')
         .then(response => response.json())
         .then(message => {
             showMessage2(message);
