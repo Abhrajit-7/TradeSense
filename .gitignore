@@ -40,3 +40,4 @@ target/
 .idea/
 *.swp
 *.swo
+src/main/resources/application-prod.properties
