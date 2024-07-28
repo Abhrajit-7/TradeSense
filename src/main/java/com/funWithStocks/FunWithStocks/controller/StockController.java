@@ -59,6 +59,8 @@ public class StockController {
         }
     }
 
+
+
     @Autowired
     SimpMessagingTemplate simpMessagingTemplate;
     // Mapped as /app/application

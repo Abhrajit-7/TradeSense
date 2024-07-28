@@ -8,7 +8,6 @@ import static org.springframework.test.web.servlet.result.MockMvcResultMatchers.
 import java.math.BigDecimal;
 
 import com.funWithStocks.FunWithStocks.controller.ProfitController;
-import com.funWithStocks.FunWithStocks.repository.StockRepository;
 import com.funWithStocks.FunWithStocks.services.ProfitService;
 import org.junit.Before;
 import org.junit.Test;
@@ -16,7 +15,6 @@ import org.junit.runner.RunWith;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.MockitoJUnitRunner;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 
@@ -30,9 +28,6 @@ public class ProfitControllerTest {
 
     @InjectMocks
     private ProfitController profitController;
-
-    @Autowired
-    private StockRepository stockRepository;
 
     @Before
     public void setup() {
@@ -60,7 +55,7 @@ public class ProfitControllerTest {
     public void testGetUnrealizedProfit() throws Exception {
         String stockCode = "RELIANCE";
         int quantity = 10;
-        BigDecimal buyPrice = stockRepository.findLatestPrice("RELIANCE");
+        BigDecimal buyPrice = new BigDecimal("100.00");
         BigDecimal unrealizedProfit = new BigDecimal("70.00");
 
         when(profitService.calculateUnrealizedProfit(stockCode, quantity, buyPrice)).thenReturn(unrealizedProfit);

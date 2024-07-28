@@ -1,16 +1,23 @@
 package com.funWithStocks.FunWithStocks.controller;
 
+import com.funWithStocks.FunWithStocks.dto.StockTransactionDTO;
 import com.funWithStocks.FunWithStocks.entity.HistoricalStockPrice;
 import com.funWithStocks.FunWithStocks.services.HistoricalStockPriceService;
+import com.funWithStocks.FunWithStocks.services.PnLAnalysisService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
 public class HistoricalStockPriceController {
+
+    @Autowired
+    private PnLAnalysisService pnLAnalysisService;
 
     @Autowired
     private HistoricalStockPriceService historicalStockPriceService;
@@ -37,6 +44,13 @@ public class HistoricalStockPriceController {
     @GetMapping("/getHistoricalData")
     public List<HistoricalStockPrice> getHistoricalData(@RequestParam String stockCode) {
         return historicalStockPriceService.getHistoricalData(stockCode);
+    }
+
+    @GetMapping("/getP&LAnalysis")
+    public ResponseEntity<List<StockTransactionDTO>> getMaxProfit(@RequestParam("stockCode") String stockCode) {
+        BigDecimal maxProfitPrevWeek=pnLAnalysisService.maxProfitWithUnlimitedTransactions(stockCode);
+        List<StockTransactionDTO> bestTimeToBuyNSell=pnLAnalysisService.findBestBuySellDays(stockCode);
+        return ResponseEntity.ok(bestTimeToBuyNSell);
     }
 }
 
