@@ -41,3 +41,4 @@ target/
 *.swp
 *.swo
 src/main/resources/application-prod.properties
+src/main/resources/application-prod.properties
