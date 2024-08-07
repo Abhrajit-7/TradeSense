@@ -79,7 +79,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         username: username
                     };
 
-                    fetch('http://localhost:8080/api/v1/teer/' + username + '/1/submitNumber', {
+                    fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/teer/' + username + '/1/submitNumber', {
                             method: 'POST',
                             headers: {
                                 'Content-Type': 'application/json'

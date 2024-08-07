@@ -41,7 +41,7 @@ function generateTreeHTML(node, isRoot=true) {
 // Function to fetch tree structure from backend and populate the tree
 async function fetchAndPopulateTree(userId) {
     try {
-        const response = await fetch('http://localhost:8080/api/v1/members/{userId}/showTree'); // Adjust the endpoint URL as per your backend
+        const response = await fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/members/{userId}/showTree'); // Adjust the endpoint URL as per your backend
         const treeData = await response.json();
         //const userId=user.id;
 

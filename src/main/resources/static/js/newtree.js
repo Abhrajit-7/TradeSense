@@ -44,7 +44,7 @@ const jwtToken=localStorage.getItem('jwtToken');
 // Function to fetch tree structure from backend and populate the tree
 async function fetchAndPopulateTree(username) {
     try {
-        const response = await fetch('http://arrowenterprise.co.in/api/v1/members/' + username + '/showTree',{
+        const response = await fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/members/' + username + '/showTree',{
             headers: {
             'Authorization': `Bearer ${jwtToken}`,
             'Content-Type': 'application/json'

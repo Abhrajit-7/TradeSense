@@ -238,9 +238,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
                         let endpoint = '';
                         if (currentSlotIndex === 0) {
-                            endpoint = 'http://localhost:8082/api/v1/submit/slot1/'+username;
+                            endpoint = 'http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/submit/slot1/'+username;
                         } else if (currentSlotIndex === 1) {
-                            endpoint = 'http://localhost:8082/api/v1/submit/slot2/'+username;
+                            endpoint = 'http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/submit/slot2/'+username;
                         }
 
                         fetch(endpoint, {
@@ -308,7 +308,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     function getList(slot){
-        fetch('http://localhost:8082/api/v1/lists/'+ username +'?slot=Slot-'+slot)
+        fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/lists/'+ username +'?slot=Slot-'+slot)
         .then(response => response.json())
         .then(data => {
             // Store data in localStorage
@@ -415,7 +415,7 @@ window.onload = function() {
 
 // Function to handle logout
 function logout() {
-    fetch('http://localhost:8082/logout', {
+    fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/logout', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'

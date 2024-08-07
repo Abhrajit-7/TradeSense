@@ -31,14 +31,11 @@ build/
 
 ### VS Code ###
 .vscode/
-target/
 *.log
 *.class
 *.jar
 *.war
-*.iml
 .idea/
 *.swp
 *.swo
-src/main/resources/application-prod.properties
 src/main/resources/application-prod.properties

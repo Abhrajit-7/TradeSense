@@ -60,7 +60,7 @@
             };
 
             const method = initialPostDone ? 'PUT' : 'POST';
-            fetch('http://localhost:8082/api/v1/profiles/'+username, {
+            fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/profiles/'+username, {
                 method: method,
                 headers: {
                     'Content-Type': 'application/json'
@@ -77,7 +77,7 @@
         }
 
         function fetchProfile() {
-            fetch('http://localhost:8082/api/v1/profiles/'+username, {
+            fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/profiles/'+username, {
                 method: 'GET',
                 headers: {
                     'Content-Type': 'application/json'

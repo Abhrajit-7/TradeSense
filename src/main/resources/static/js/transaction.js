@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 function fetchTransactions() {
-    fetch('http://localhost:8082/api/v1/' + username + '/transactions',{
+    fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/' + username + '/transactions',{
     method: 'GET',
     headers: {
         'Authorization': `Bearer ${jwtToken}`,

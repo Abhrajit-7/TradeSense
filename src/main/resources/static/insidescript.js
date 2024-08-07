@@ -48,7 +48,7 @@ function submitNumber() {
     formData.append('selectedNumber', selectedNumber);
 
     // Send a POST request to the backend
-    fetch('http://localhost:8081/teer/numbers/submitNumber', {
+    fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/teer/numbers/submitNumber', {
         method: 'POST',
         body: formData,
     })

@@ -4,7 +4,7 @@ function submitDepositRequest() {
         const username = localStorage.getItem('username');
 
         // Make a POST request to your Spring Boot endpoint to submit deposit request
-        fetch('http://localhost:8082/transaction/deposit', {
+        fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/transaction/deposit', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -19,7 +19,7 @@ document.getElementById('signup-section').addEventListener('submit', function (e
             alert('Username valid!');
         }
   
-    fetch('http://localhost:8082/api/v1/register', {
+    fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/register', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -40,7 +40,7 @@ document.getElementById('signup-section').addEventListener('submit', function (e
             usernameMessage.style.color = 'green';
             //message.textContent = 'User created successfully.';
             //message.style.color = 'green';
-            alert(`Hi, ${response.username}! Welcome to Arrow Enterprise :D`);
+            alert(`Hi, Welcome to Trade Sense :D`);
             window.location.href='/login';
         } else {
             usernameInput.classList.remove('input-success');

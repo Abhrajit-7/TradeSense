@@ -87,7 +87,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         username: username
                     };
 
-                    fetch('http://localhost:8081/api/v1/teer/' + username + '/submitNumber/', {
+                    fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/teer/' + username + '/submitNumber/', {
                             method: 'POST',
                             headers: {
                                 'Authorization': `Bearer ${jwtToken}`,

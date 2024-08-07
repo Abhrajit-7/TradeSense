@@ -3,7 +3,7 @@ function submitDepositRequest() {
         var amount = document.getElementById("amount").value;
         const username = localStorage.getItem('username');
         // Make a POST request to your Spring Boot endpoint to submit withdraw request
-        fetch('http://localhost:8082/transaction/withdrawPage', {
+        fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/transaction/withdrawPage', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

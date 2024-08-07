@@ -81,7 +81,7 @@
 <script>
     const username=localStorage.getItem('username');
     // Make AJAX request to fetch transaction
-        fetch('http://arrowenterprise.co.in/transaction/' + username + '/fetchTransactions')
+        fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/transaction/' + username + '/fetchTransactions')
             .then(response => {
                 if (!response.ok) {
                     throw new Error('Failed to fetch transaction');
@@ -137,7 +137,7 @@
             });
 </script>
 <footer>
-    <p>&copy; 2024 Arrow Enterprise. All rights reserved.</p>
+    <p>&copy; 2024 Trade Sense. All rights reserved.</p>
 </footer>
 </body>
 </html>

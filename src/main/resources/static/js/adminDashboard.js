@@ -45,7 +45,7 @@ var stompClient = null;
 document.addEventListener('DOMContentLoaded', function() {
             // Fetch and display withdrawal transactions
 
-            fetch('http://arrowenterprise.co.in/transaction/withdrawals')
+            fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/transaction/withdrawals')
                 .then(response => response.json())
                 .then(transactions => {
                     const transactionsDiv = document.getElementById('transactions');
@@ -108,7 +108,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 const winner = document.getElementById('winner').value;
                 const slot = document.getElementById('slot').value;
 
-                fetch('http://localhost:8082/api/v1/winner', {
+                fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/winner', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/x-www-form-urlencoded',
@@ -170,7 +170,7 @@ function confirmTransaction(transactionId, amount, transactionElement) {
     confirmButton.textContent = 'Loading...';
     console.log(transactionId);
     console.log(amount);
-    fetch('http://arrowenterprise.co.in/transaction/updateStatus', {
+    fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/transaction/updateStatus', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

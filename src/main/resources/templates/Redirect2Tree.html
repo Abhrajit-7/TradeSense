@@ -16,7 +16,7 @@
     window.onload = function() {
         var xhr = new XMLHttpRequest();
         const token=localStorage.getItem('jwtToken');
-        xhr.open('GET', 'http://localhost:8081/showMembers', true);
+        xhr.open('GET', 'http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/showMembers', true);
         xhr.setRequestHeader('Authorization', token);
         xhr.onreadystatechange = function () {
             if (xhr.readyState === 4) {

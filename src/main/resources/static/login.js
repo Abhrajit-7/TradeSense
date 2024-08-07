@@ -6,7 +6,7 @@ document.getElementById('login-section').addEventListener('submit', function (ev
 
 
     try {
-       fetch('http://localhost:8082/api/v1/login', {
+       fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/login', {
              method: 'POST',
              headers: {
                'Content-Type': 'application/json',
@@ -52,7 +52,7 @@ document.getElementById('login-section').addEventListener('submit', function (ev
               const jwtToken = localStorage.getItem('jwtToken');
 
               // Make a fetch request to the authenticated dashboard endpoint
-              fetch('http://localhost:8082/api/v1/userDashboard', {
+              fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/userDashboard', {
                   method: 'GET',
                   headers: {
                       'Authorization': `Bearer ${jwtToken}`

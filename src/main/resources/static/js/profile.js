@@ -64,7 +64,7 @@ const username=localStorage.getItem('username');
 
             const method = initialPostDone ? 'PUT' : 'POST'; // Determine the HTTP method
             const username=localStorage.getItem('username');
-            fetch('http://arrowenterprise.co.in/api/v1/profiles/' + username, {
+            fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/profiles/' + username, {
                 method: method,
                 headers: {
                     'Content-Type': 'application/json'
@@ -81,7 +81,7 @@ const username=localStorage.getItem('username');
         }
 
         function fetchProfile() {
-            fetch('http://localhost:8082/api/v1/profiles/' + username,
+            fetch('http://ec2-13-201-33-242.ap-south-1.compute.amazonaws.com/api/v1/profiles/' + username,
             {
             method: 'GET',
             headers: {
